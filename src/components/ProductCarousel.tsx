@@ -1,4 +1,4 @@
-﻿import { useState } from "react";
+import { useState } from "react";
 import { ChevronLeft, ChevronRight, ImageIcon } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -28,14 +28,14 @@ export function ProductCarousel({ slides }: { slides: CarouselSlide[] }) {
 
   if (!slides?.length) {
     return (
-      <div className="relative aspect-square bg-[#f5f5f7] flex items-center justify-center text-gray-400 rounded-3xl">
+      <div className="relative aspect-square bg-[#111113] flex items-center justify-center text-white/20 rounded-3xl border border-white/5">
         <ImageIcon className="w-12 h-12 opacity-30" />
       </div>
     );
   }
 
   return (
-    <div className="relative aspect-square bg-[#f5f5f7] overflow-hidden group rounded-3xl">
+    <div className="relative aspect-square bg-[#111113] overflow-hidden group rounded-3xl border border-white/5">
       <AnimatePresence initial={false} custom={dir}>
         {current.src ? (
           <motion.img
@@ -59,10 +59,10 @@ export function ProductCarousel({ slides }: { slides: CarouselSlide[] }) {
             animate="center"
             exit="exit"
             transition={{ x: { type: "spring", stiffness: 280, damping: 30 }, opacity: { duration: 0.2 } }}
-            className="absolute inset-0 flex flex-col items-center justify-center text-gray-400 p-6 text-center rounded-3xl"
+            className="absolute inset-0 flex flex-col items-center justify-center text-white/20 p-6 text-center rounded-3xl"
           >
             <ImageIcon className="w-12 h-12 mb-3 opacity-30" />
-            <span className="text-sm font-semibold text-gray-500">{current.label}</span>
+            <span className="text-sm font-semibold text-white/30">{current.label}</span>
           </motion.div>
         )}
       </AnimatePresence>
@@ -71,22 +71,22 @@ export function ProductCarousel({ slides }: { slides: CarouselSlide[] }) {
         <>
           <button
             onClick={() => go(-1)}
-            className="absolute left-4 top-1/2 -translate-y-1/2 w-10 h-10 bg-white/90 backdrop-blur rounded-full flex items-center justify-center shadow-md opacity-0 group-hover:opacity-100 transition-opacity hover:scale-105 z-10 cursor-pointer"
+            className="absolute left-3 top-1/2 -translate-y-1/2 w-9 h-9 bg-black/50 backdrop-blur border border-white/10 rounded-full flex items-center justify-center shadow-md opacity-0 group-hover:opacity-100 transition-all hover:scale-105 hover:bg-black/70 z-10 cursor-pointer"
           >
-            <ChevronLeft className="w-5 h-5 text-gray-700" />
+            <ChevronLeft className="w-4 h-4 text-white" />
           </button>
           <button
             onClick={() => go(1)}
-            className="absolute right-4 top-1/2 -translate-y-1/2 w-10 h-10 bg-white/90 backdrop-blur rounded-full flex items-center justify-center shadow-md opacity-0 group-hover:opacity-100 transition-opacity hover:scale-105 z-10 cursor-pointer"
+            className="absolute right-3 top-1/2 -translate-y-1/2 w-9 h-9 bg-black/50 backdrop-blur border border-white/10 rounded-full flex items-center justify-center shadow-md opacity-0 group-hover:opacity-100 transition-all hover:scale-105 hover:bg-black/70 z-10 cursor-pointer"
           >
-            <ChevronRight className="w-5 h-5 text-gray-700" />
+            <ChevronRight className="w-4 h-4 text-white" />
           </button>
           <div className="absolute bottom-4 inset-x-0 flex justify-center gap-1.5 z-10">
             {slides.map((_, idx) => (
               <button
                 key={idx}
                 onClick={() => { setDir(idx > i ? 1 : -1); setI(idx); }}
-                className={`h-1.5 rounded-full transition-all cursor-pointer ${idx === i ? "w-6 bg-[#A61713]" : "w-1.5 bg-gray-300/80"}`}
+                className={`h-1.5 rounded-full transition-all cursor-pointer ${idx === i ? "w-6 bg-[#FF5722]" : "w-1.5 bg-white/20"}`}
               />
             ))}
           </div>
@@ -95,3 +95,4 @@ export function ProductCarousel({ slides }: { slides: CarouselSlide[] }) {
     </div>
   );
 }
+

@@ -1,4 +1,4 @@
-﻿import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { motion, useInView } from "framer-motion";
 
 const stats = [
@@ -34,7 +34,7 @@ export function SocialProofCounter() {
   return (
     <section className="py-12 bg-transparent">
       <div className="max-w-5xl mx-auto px-4 sm:px-6">
-        <div className="bg-white rounded-3xl p-8 sm:p-10 shadow-card border border-[#e8e8ed]/60 grid grid-cols-3 gap-4 sm:gap-8 divide-x divide-gray-100">
+        <div className="bg-[#18181b] rounded-3xl p-8 sm:p-10 border border-white/5 grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-4 divide-y md:divide-y-0 md:divide-x divide-white/10">
           {stats.map((s, i) => (
             <motion.div
               key={s.label}
@@ -42,12 +42,12 @@ export function SocialProofCounter() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: i * 0.1 }}
-              className="text-center px-2 sm:px-6"
+              className="text-center py-4 first:pt-0 last:pb-0 md:py-0 md:px-6"
             >
-              <div className="text-3xl sm:text-4xl font-bold text-[#A61713] tracking-tight">
+              <div className="text-3xl sm:text-4xl font-bold text-[#FF5722] tracking-tight">
                 <CountUp to={s.value} decimals={s.decimals} suffix={s.suffix} />
               </div>
-              <div className="text-[10px] sm:text-xs font-semibold text-gray-400 mt-2 tracking-wide uppercase">
+              <div className="text-[10px] sm:text-xs font-semibold text-white/40 mt-2 tracking-wide uppercase">
                 {s.label}
               </div>
             </motion.div>

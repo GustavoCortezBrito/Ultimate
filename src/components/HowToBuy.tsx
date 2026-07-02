@@ -10,20 +10,19 @@ const steps = [
 
 export function HowToBuy() {
   return (
-    <section id="como-comprar" className="py-20 sm:py-28 bg-[#f5f5f7]">
+    <section id="como-comprar" className="py-20 sm:py-28 bg-[#0e0e10]">
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
-        {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="text-center mb-24 space-y-3"
+          className="text-center mb-24 space-y-5"
         >
-          <span className="text-[11px] font-bold uppercase tracking-wider text-[#FF683C] bg-[#FF683C]/8 px-3.5 py-1.5 rounded-full">
+          <span className="inline-block text-[11px] font-bold uppercase tracking-wider text-[#FF5722] bg-[#FF5722]/10 px-3.5 py-1.5 rounded-full">
             Processo de Compra
           </span>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#1d1d1f] tracking-tight">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white tracking-tight">
             Comprar é rápido e 100% seguro.
           </h2>
         </motion.div>
@@ -37,19 +36,19 @@ export function HowToBuy() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: i * 0.1 }}
-              className="bg-white rounded-3xl p-7 flex flex-col justify-between shadow-card border border-[#e8e8ed]/60 hover:shadow-hover transition-all duration-300 group"
+              className="bg-[#18181b] rounded-3xl p-7 flex flex-col justify-between border border-white/5 hover:border-[#FF5722]/30 hover:shadow-hover transition-all duration-300 group"
             >
               <div className="flex items-start justify-between mb-6">
-                <div className="w-12 h-12 bg-[#A61713]/8 rounded-2xl flex items-center justify-center text-[#A61713]">
+                <div className="w-12 h-12 bg-[#FF5722]/10 rounded-2xl flex items-center justify-center text-[#FF5722]">
                   <Icon className="w-5.5 h-5.5" />
                 </div>
-                <span className="text-3xl font-bold text-gray-200 select-none">{step}</span>
+                <span className="text-3xl font-bold text-[#FF5722]/30 select-none">{step}</span>
               </div>
               <div className="space-y-2">
-                <h3 className="text-[#1d1d1f] font-bold text-lg leading-snug group-hover:text-[#A61713] transition-colors">
+                <h3 className="text-white font-bold text-lg leading-snug group-hover:text-[#FF5722] transition-colors">
                   {title}
                 </h3>
-                <p className="text-gray-400 text-xs sm:text-sm leading-relaxed font-medium">
+                <p className="text-white/50 text-xs sm:text-sm leading-relaxed font-medium">
                   {desc}
                 </p>
               </div>
@@ -69,7 +68,7 @@ export function HowToBuy() {
             href="https://www.mercadolivre.com.br/ultimate-fitness-mini-bike-bicicleta-ergometrica/up/MLBU2934790909"
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-[#A61713] hover:bg-[#8f1210] text-white font-bold text-sm px-8 py-3.5 rounded-full transition-colors shadow-sm text-center"
+            className="bg-gradient-to-r from-[#D11919] to-[#FF5722] hover:opacity-90 text-white font-bold text-sm px-8 py-3.5 rounded-full transition-all shadow-sm text-center"
           >
             Ver Mini Bike no Mercado Livre
           </a>
@@ -77,7 +76,7 @@ export function HowToBuy() {
             href="https://www.mercadolivre.com.br/ultimate-fitness-bicicleta-ergometrica-spinning/up/MLBU3325822548"
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-white border border-gray-300 hover:border-gray-400 text-gray-700 font-bold text-sm px-8 py-3.5 rounded-full transition-colors shadow-sm text-center"
+            className="bg-white/5 border border-white/15 hover:bg-white/10 text-white/80 font-bold text-sm px-8 py-3.5 rounded-full transition-all text-center"
           >
             Ver Spinning no Mercado Livre
           </a>

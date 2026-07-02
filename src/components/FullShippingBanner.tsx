@@ -10,20 +10,19 @@ const perks = [
 
 export function FullShippingBanner() {
   return (
-    <section className="bg-white py-20 sm:py-24 border-t border-[#e8e8ed]">
+    <section className="bg-[#111113] py-20 sm:py-24 border-t border-white/5">
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
-        {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 15 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="text-center mb-24 space-y-3"
+          className="text-center mb-24 space-y-5"
         >
-          <span className="text-[11px] font-bold uppercase tracking-wider text-[#FF683C] bg-[#FF683C]/8 px-3.5 py-1.5 rounded-full">
-            Garantia & Logística
+          <span className="inline-block text-[11px] font-bold uppercase tracking-wider text-[#FF5722] bg-[#FF5722]/10 px-3.5 py-1.5 rounded-full">
+            Garantia &amp; Logística
           </span>
-          <h2 className="text-3xl sm:text-4xl font-bold text-[#1d1d1f] tracking-tight">
+          <h2 className="text-3xl sm:text-4xl font-bold text-white tracking-tight">
             Toda a segurança do Mercado Livre.
           </h2>
         </motion.div>
@@ -37,14 +36,14 @@ export function FullShippingBanner() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.45, delay: i * 0.08 }}
-              className="bg-[#f5f5f7] rounded-3xl p-6 sm:p-7 flex flex-col gap-4 hover:shadow-card hover:bg-white transition-all duration-300 group"
+              className="bg-[#18181b] rounded-3xl p-6 sm:p-7 flex flex-col gap-4 hover:shadow-hover transition-all duration-300 group border border-white/5 hover:border-[#FF5722]/30"
             >
-              <div className="w-10 h-10 bg-[#A61713]/8 rounded-xl flex items-center justify-center text-[#A61713] shrink-0">
+              <div className="w-10 h-10 bg-[#FF5722]/10 rounded-xl flex items-center justify-center text-[#FF5722] shrink-0">
                 <Icon className="w-5 h-5" />
               </div>
               <div className="space-y-1.5">
-                <h3 className="font-bold text-sm text-[#1d1d1f] group-hover:text-[#A61713] transition-colors">{title}</h3>
-                <p className="text-xs sm:text-sm text-gray-500 leading-relaxed font-medium">{desc}</p>
+                <h3 className="font-bold text-sm text-white group-hover:text-[#FF5722] transition-colors">{title}</h3>
+                <p className="text-xs sm:text-sm text-white/50 leading-relaxed font-medium">{desc}</p>
               </div>
             </motion.div>
           ))}

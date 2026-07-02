@@ -168,7 +168,7 @@ function Index() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-[#f8f8fa] text-[#1d1d1f] overflow-x-hidden font-sans">
+    <div className="min-h-screen bg-[#0e0e10] text-white overflow-x-hidden font-sans">
       <LoadingScreen />
       {/* Header — always dark-bg transparent, white nav */}
       <header
@@ -183,7 +183,7 @@ function Index() {
             <img
               src={logoAsset}
               alt="Logo Ultimate Fitness"
-              className="h-8 sm:h-9 w-auto brightness-0 invert"
+              className="h-8 sm:h-9 w-auto"
             />
           </a>
 
@@ -342,16 +342,16 @@ function Index() {
         <SocialProofCounter />
 
         {/* PRODUCTS SECTION */}
-        <section id="produtos" className="py-20 sm:py-28 bg-[#f8f8fa]">
+        <section id="produtos" className="py-20 sm:py-28 bg-[#111113]">
           <div className="max-w-6xl mx-auto px-4 sm:px-6">
-            <div className="text-center max-w-2xl mx-auto mb-24 space-y-3">
-              <span className="text-[11px] font-bold uppercase tracking-wider text-[#FF5722] bg-[#FF5722]/8 px-3.5 py-1.5 rounded-full">
+            <div className="text-center max-w-2xl mx-auto mb-24 space-y-5">
+              <span className="inline-block text-[11px] font-bold uppercase tracking-wider text-[#FF5722] bg-[#FF5722]/10 px-3.5 py-1.5 rounded-full">
                 Equipamentos em Destaque
               </span>
-              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-[#1d1d1f]">
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-white">
                 Compactos, Resistentes e Silenciosos
               </h2>
-              <p className="text-xs sm:text-sm text-gray-500 font-medium">
+              <p className="text-xs sm:text-sm text-white/50 font-medium">
                 Adquira diretamente pela plataforma do Mercado Livre com envio expresso e suporte nacional completo.
               </p>
             </div>
@@ -369,14 +369,14 @@ function Index() {
         {/* HOW TO BUY STEPPER */}
         <HowToBuy />
 
-        {/* FEATURES GRID — White */}
-        <section className="py-20 sm:py-28 bg-white">
+        {/* FEATURES GRID — Dark */}
+        <section className="py-20 sm:py-28 bg-[#0e0e10]">
           <div className="max-w-6xl mx-auto px-4 sm:px-6">
-            <div className="text-center max-w-2xl mx-auto mb-24 space-y-3">
-              <span className="text-[11px] font-bold uppercase tracking-wider text-[#FF5722] bg-[#FF5722]/8 px-3.5 py-1.5 rounded-full">
+            <div className="text-center max-w-2xl mx-auto mb-24 space-y-5">
+              <span className="inline-block text-[11px] font-bold uppercase tracking-wider text-[#FF5722] bg-[#FF5722]/10 px-3.5 py-1.5 rounded-full">
                 Nossos Diferenciais
               </span>
-              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-[#1d1d1f]">
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-white">
                 Por que escolher a Ultimate Fitness?
               </h2>
             </div>
@@ -385,16 +385,16 @@ function Index() {
               {features.map((f, i) => (
                 <div
                   key={f.title}
-                  className="bg-[#f8f8fa] rounded-3xl p-7 flex flex-col gap-6 hover:shadow-card hover:bg-white transition-all duration-300 group border border-transparent hover:border-[#e8e8ed]"
+                  className="bg-[#18181b] rounded-3xl p-7 flex flex-col gap-6 hover:shadow-hover transition-all duration-300 group border border-white/5 hover:border-[#FF5722]/30"
                 >
-                  <div className="w-12 h-12 bg-[#D11919]/8 rounded-2xl flex items-center justify-center text-[#D11919] shrink-0">
+                  <div className="w-12 h-12 bg-[#FF5722]/10 rounded-2xl flex items-center justify-center text-[#FF5722] shrink-0">
                     <f.icon className="w-5.5 h-5.5" />
                   </div>
                   <div className="space-y-1.5">
-                    <h3 className="font-bold text-[#1d1d1f] text-base group-hover:text-[#D11919] transition-colors">
+                    <h3 className="font-bold text-white text-base group-hover:text-[#FF5722] transition-colors">
                       {f.title}
                     </h3>
-                    <p className="text-xs sm:text-sm text-gray-500 leading-relaxed font-semibold">
+                    <p className="text-xs sm:text-sm text-white/50 leading-relaxed font-semibold">
                       {f.text}
                     </p>
                   </div>
@@ -411,55 +411,55 @@ function Index() {
         <FAQ />
 
         {/* ABOUT SECTION */}
-        <section id="sobre" className="py-20 sm:py-28 bg-white border-t border-[#e8e8ed]">
+        <section id="sobre" className="py-20 sm:py-28 bg-[#111113] border-t border-white/5">
           <div className="max-w-6xl mx-auto px-4 sm:px-6">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
               {/* Left Image Showroom */}
               <div className="lg:col-span-5 relative flex justify-center">
-                <div className="relative w-full max-w-[420px] aspect-[4/3] rounded-3xl overflow-hidden shadow-card border border-[#e8e8ed] bg-white p-2">
+                <div className="relative w-full max-w-[420px] rounded-3xl overflow-hidden shadow-card border border-white/10 bg-[#18181b] p-2">
                   <img
                     src={brandOfficeImg}
                     alt="Showroom Ultimate Fitness"
-                    className="w-full h-full object-cover rounded-2xl"
+                    className="w-full h-auto rounded-2xl block"
                   />
                 </div>
               </div>
 
               {/* Right Content */}
               <div className="lg:col-span-7 space-y-6 text-left">
-                <span className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-[#f8f8fa] text-gray-500 text-[10px] font-bold tracking-wider uppercase border border-[#e8e8ed]">
+                <span className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-[#FF5722]/10 text-[#FF5722] text-[10px] font-bold tracking-wider uppercase border border-[#FF5722]/20">
                   Quem Somos
                 </span>
 
-                <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-[#1d1d1f]">
+                <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-white">
                   A marca Ultimate Fitness
                 </h2>
 
-                <p className="text-sm sm:text-base text-gray-500 leading-relaxed font-semibold">
-                  A Ultimate Fitness é uma marca registrada da <strong>ULTIMATE POWER DO BRASIL LTDA</strong>, uma empresa especializada no comércio varejista de artigos esportivos com sede na bela cidade de Florianópolis/SC.
+                <p className="text-sm sm:text-base text-white/55 leading-relaxed font-semibold">
+                  A Ultimate Fitness é uma marca da <strong className="text-white">ULTIMATE POWER DO BRASIL LTDA</strong>, loja fitness em Florianópolis/SC, especializada no comércio varejista de artigos esportivos.
                 </p>
 
-                <p className="text-sm sm:text-base text-gray-500 leading-relaxed font-semibold">
-                  Nosso compromisso fundamental é selecionar e oferecer equipamentos residenciais compactos, duráveis e altamente funcionais — como a mini bike ergométrica e a bicicleta de spinning — que permitam a você manter uma rotina ativa e saudável direto no conforto do seu lar.
+                <p className="text-sm sm:text-base text-white/55 leading-relaxed font-semibold">
+                  Nosso foco é oferecer equipamentos fitness compactos, práticos e funcionais — como mini bike ergométrica para casa, bicicleta spinning residencial e acessórios para treino em casa — para quem deseja melhorar o condicionamento físico e manter uma rotina mais ativa.
                 </p>
 
                 {/* Company Specs Grid */}
-                <div className="grid grid-cols-2 gap-6 pt-4 border-t border-[#e8e8ed]">
+                <div className="grid grid-cols-2 gap-6 pt-4 border-t border-white/10">
                   <div>
-                    <div className="text-[10px] font-bold text-gray-400 uppercase tracking-wider">Razão Social</div>
-                    <div className="text-xs sm:text-sm font-bold text-[#1d1d1f] mt-1">ULTIMATE POWER DO BRASIL LTDA</div>
+                    <div className="text-[10px] font-bold text-white/40 uppercase tracking-wider">Razão Social</div>
+                    <div className="text-xs sm:text-sm font-bold text-white mt-1">ULTIMATE POWER DO BRASIL LTDA</div>
                   </div>
                   <div>
-                    <div className="text-[10px] font-bold text-gray-400 uppercase tracking-wider">CNPJ</div>
-                    <div className="text-xs sm:text-sm font-bold text-[#1d1d1f] mt-1">57.491.644/0001-47</div>
+                    <div className="text-[10px] font-bold text-white/40 uppercase tracking-wider">CNPJ</div>
+                    <div className="text-xs sm:text-sm font-bold text-white mt-1">57.491.644/0001-47</div>
                   </div>
                   <div>
-                    <div className="text-[10px] font-bold text-gray-400 uppercase tracking-wider">Sede Corporativa</div>
-                    <div className="text-xs sm:text-sm font-bold text-[#1d1d1f] mt-1">Florianópolis / SC</div>
+                    <div className="text-[10px] font-bold text-white/40 uppercase tracking-wider">Sede Corporativa</div>
+                    <div className="text-xs sm:text-sm font-bold text-white mt-1">Florianópolis / SC</div>
                   </div>
                   <div>
-                    <div className="text-[10px] font-bold text-gray-400 uppercase tracking-wider">Canal Logístico</div>
-                    <div className="text-xs sm:text-sm font-bold text-[#D11919] mt-1">Mercado Livre Full</div>
+                    <div className="text-[10px] font-bold text-white/40 uppercase tracking-wider">Canal Logístico</div>
+                    <div className="text-xs sm:text-sm font-bold text-[#FF5722] mt-1">Mercado Livre Full</div>
                   </div>
                 </div>
               </div>

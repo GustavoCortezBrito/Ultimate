@@ -9,8 +9,8 @@ export function LoadingScreen() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setFadeOut(true);
-      setTimeout(() => setVisible(false), 600);
-    }, 1800);
+      setTimeout(() => setVisible(false), 700);
+    }, 2000);
     return () => clearTimeout(timer);
   }, []);
 
@@ -23,74 +23,86 @@ export function LoadingScreen() {
           key="loading-screen"
           initial={{ opacity: 1 }}
           exit={{ opacity: 0 }}
-          transition={{ duration: 0.6, ease: "easeInOut" }}
-          className="fixed inset-0 z-[200] flex flex-col items-center justify-center bg-white"
+          transition={{ duration: 0.7, ease: "easeInOut" }}
+          className="fixed inset-0 z-[200] flex flex-col items-center justify-center bg-[#0a0a0c] overflow-hidden"
         >
-          {/* Background gradient glow */}
+          {/* Ambient background glows */}
           <div
             className="absolute inset-0 pointer-events-none"
             style={{
               background:
-                "radial-gradient(ellipse at 50% 50%, rgba(209,25,25,0.06) 0%, transparent 65%)",
+                "radial-gradient(ellipse 70% 50% at 50% 50%, rgba(255,87,34,0.07) 0%, transparent 70%)",
+            }}
+          />
+          <motion.div
+            animate={{ scale: [1, 1.15, 1], opacity: [0.3, 0.55, 0.3] }}
+            transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
+            className="absolute w-[400px] h-[400px] rounded-full pointer-events-none"
+            style={{
+              background:
+                "radial-gradient(circle, rgba(255,87,34,0.12) 0%, transparent 65%)",
             }}
           />
 
           {/* Content */}
-          <div className="relative flex flex-col items-center gap-8">
-            {/* Logo animated entrance */}
+          <div className="relative flex flex-col items-center gap-5 px-8">
+            {/* Logo (contains real bolt from header) */}
             <motion.div
-              initial={{ opacity: 0, y: 16, scale: 0.9 }}
-              animate={{ opacity: 1, y: 0, scale: 1 }}
-              transition={{ duration: 0.55, ease: [0.34, 1.56, 0.64, 1] }}
-              className="flex items-center gap-2"
+              initial={{ opacity: 0, scale: 0.75, y: 24 }}
+              animate={{ opacity: 1, scale: 1, y: 0 }}
+              transition={{ duration: 0.65, ease: [0.34, 1.4, 0.64, 1] }}
+              className="relative"
             >
-              {/* Zap Icon */}
+              {/* Halo ring behind logo */}
               <motion.div
-                initial={{ opacity: 0, rotate: -20, scale: 0.5 }}
-                animate={{ opacity: 1, rotate: 0, scale: 1 }}
-                transition={{ delay: 0.15, duration: 0.5, ease: [0.34, 1.56, 0.64, 1] }}
-              >
-                <svg
-                  viewBox="0 0 24 24"
-                  fill="#FF5722"
-                  className="w-8 h-8"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
-                </svg>
-              </motion.div>
+                animate={{ opacity: [0, 0.5, 0], scale: [0.85, 1.1, 0.85] }}
+                transition={{ duration: 2.4, repeat: Infinity, ease: "easeInOut", delay: 0.3 }}
+                className="absolute inset-0 rounded-full"
+                style={{
+                  background: "radial-gradient(circle, rgba(255,87,34,0.25) 0%, transparent 65%)",
+                }}
+              />
               <img
                 src={logoAsset}
                 alt="Ultimate Fitness"
-                className="h-10 w-auto"
+                className="h-16 sm:h-20 w-auto relative z-10 drop-shadow-[0_0_20px_rgba(255,87,34,0.45)]"
               />
             </motion.div>
 
+            {/* Divider line */}
+            <motion.div
+              initial={{ scaleX: 0, opacity: 0 }}
+              animate={{ scaleX: 1, opacity: 1 }}
+              transition={{ delay: 0.4, duration: 0.5, ease: "easeOut" }}
+              className="w-32 h-px origin-center"
+              style={{ background: "linear-gradient(90deg, transparent, #FF5722, transparent)" }}
+            />
+
             {/* Tagline */}
             <motion.p
-              initial={{ opacity: 0, y: 8 }}
+              initial={{ opacity: 0, y: 6 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.35, duration: 0.45 }}
-              className="text-[11px] font-bold uppercase tracking-[0.22em] text-gray-400"
+              transition={{ delay: 0.5, duration: 0.4 }}
+              className="text-[10px] font-semibold uppercase tracking-[0.28em] text-white/35 text-center"
             >
-              Treine em casa com equipamentos de verdade
+              Equipamentos fitness de alta qualidade
             </motion.p>
 
             {/* Progress bar */}
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
-              transition={{ delay: 0.4 }}
-              className="w-48 h-[2px] rounded-full bg-[#f0f0f0] overflow-hidden"
+              transition={{ delay: 0.55 }}
+              className="w-44 h-[2px] rounded-full bg-white/8 overflow-hidden mt-1"
             >
               <motion.div
                 className="h-full rounded-full"
                 style={{
-                  background: "linear-gradient(90deg, #D11919, #FF5722)",
+                  background: "linear-gradient(90deg, #D11919, #FF5722, #FF8C55)",
                 }}
                 initial={{ width: "0%" }}
                 animate={{ width: "100%" }}
-                transition={{ delay: 0.45, duration: 1.1, ease: "easeInOut" }}
+                transition={{ delay: 0.6, duration: 1.2, ease: [0.4, 0, 0.2, 1] }}
               />
             </motion.div>
           </div>

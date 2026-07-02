@@ -30,20 +30,19 @@ const testimonials = [
 
 export function Testimonials() {
   return (
-    <section id="depoimentos" className="py-20 sm:py-28 bg-[#f5f5f7]">
+    <section id="depoimentos" className="py-20 sm:py-28 bg-[#111113]">
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
-        {/* Header */}
         <motion.div 
           initial={{ opacity: 0, y: 15 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="text-center mb-24 space-y-3"
+          className="text-center mb-24 space-y-5"
         >
-          <span className="text-[11px] font-bold uppercase tracking-wider text-[#FF683C] bg-[#FF683C]/8 px-3.5 py-1.5 rounded-full">
+          <span className="inline-block text-[11px] font-bold uppercase tracking-wider text-[#FF5722] bg-[#FF5722]/10 px-3.5 py-1.5 rounded-full">
             Depoimentos
           </span>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#1d1d1f] tracking-tight">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white tracking-tight">
             Quem comprou, aprova e recomenda.
           </h2>
         </motion.div>
@@ -57,33 +56,33 @@ export function Testimonials() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.4, delay: idx * 0.08 }}
-              className="bg-white rounded-3xl p-6 sm:p-7 flex flex-col justify-between shadow-card hover:shadow-hover transition-all duration-300"
+              className="bg-[#18181b] rounded-3xl p-6 sm:p-7 flex flex-col justify-between border border-white/5 hover:border-[#FF5722]/20 hover:shadow-hover transition-all duration-300"
             >
               <div>
                 {/* Stars */}
                 <div className="flex gap-0.5 mb-5 select-none">
                   {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="w-3.5 h-3.5 fill-[#FF683C] text-[#FF683C]" />
+                    <Star key={i} className="w-3.5 h-3.5 fill-[#FF5722] text-[#FF5722]" />
                   ))}
                 </div>
 
                 {/* Comment */}
-                <p className="text-sm text-gray-500 font-medium leading-relaxed italic">
+                <p className="text-sm text-white/55 font-medium leading-relaxed italic">
                   "{t.text}"
                 </p>
               </div>
 
               {/* Reviewer */}
-              <div className="mt-8 pt-5 border-t border-[#e8e8ed]">
-                <div className="font-bold text-sm text-[#1d1d1f]">
+              <div className="mt-8 pt-5 border-t border-white/10">
+                <div className="font-bold text-sm text-white">
                   {t.name}
                 </div>
-                <div className="text-[10px] font-semibold text-gray-400 mt-1">
+                <div className="text-[10px] font-semibold text-white/40 mt-1">
                   {t.city} · {t.product}
                 </div>
                 
                 {/* Verified */}
-                <div className="mt-4 flex items-center gap-1.5 text-[9px] font-bold text-[#00a650] uppercase tracking-wider bg-[#00a650]/8 px-2.5 py-1 rounded-full w-max select-none">
+                <div className="mt-4 flex items-center gap-1.5 text-[9px] font-bold text-[#00a650] uppercase tracking-wider bg-[#00a650]/10 px-2.5 py-1 rounded-full w-max select-none">
                   <ShieldCheck className="w-3.5 h-3.5 shrink-0" strokeWidth={3} />
                   <span>Compra verificada</span>
                 </div>

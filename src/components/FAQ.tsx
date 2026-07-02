@@ -33,20 +33,19 @@ export function FAQ() {
   const [open, setOpen] = useState<number | null>(0);
 
   return (
-    <section id="faq" className="py-20 sm:py-28 bg-white border-t border-[#e8e8ed]">
+    <section id="faq" className="py-20 sm:py-28 bg-[#0e0e10] border-t border-white/5">
       <div className="max-w-3xl mx-auto px-4 sm:px-6">
-        {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 15 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="text-center mb-24 space-y-3"
+          className="text-center mb-24 space-y-5"
         >
-          <span className="text-[11px] font-bold uppercase tracking-wider text-[#FF683C] bg-[#FF683C]/8 px-3.5 py-1.5 rounded-full">
+          <span className="inline-block text-[11px] font-bold uppercase tracking-wider text-[#FF5722] bg-[#FF5722]/10 px-3.5 py-1.5 rounded-full">
             Dúvidas
           </span>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#1d1d1f] tracking-tight">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white tracking-tight">
             Perguntas Frequentes
           </h2>
         </motion.div>
@@ -58,20 +57,20 @@ export function FAQ() {
             return (
               <div
                 key={f.q}
-                className="bg-[#f5f5f7] rounded-3xl overflow-hidden border border-transparent hover:border-[#e8e8ed] transition-all duration-300"
+                className="bg-[#18181b] rounded-3xl overflow-hidden border border-white/5 hover:border-[#FF5722]/20 transition-all duration-300"
               >
                 <button
                   onClick={() => setOpen(isOpen ? null : i)}
                   className="w-full flex items-center justify-between gap-6 p-6 text-left cursor-pointer select-none group font-medium"
                   aria-expanded={isOpen}
                 >
-                  <span className="font-bold text-[#1d1d1f] text-sm sm:text-base leading-snug">
+                  <span className="font-bold text-white text-sm sm:text-base leading-snug">
                     {f.q}
                   </span>
                   <motion.div
                     animate={{ rotate: isOpen ? 180 : 0 }}
                     transition={{ duration: 0.2, ease: "easeOut" }}
-                    className="text-gray-400 group-hover:text-[#A61713] shrink-0"
+                    className="text-white/30 group-hover:text-[#FF5722] shrink-0"
                   >
                     <ChevronDown className="w-5 h-5" />
                   </motion.div>
@@ -85,7 +84,7 @@ export function FAQ() {
                       exit={{ height: 0, opacity: 0 }}
                       transition={{ duration: 0.25, ease: "easeInOut" }}
                     >
-                      <div className="px-6 pb-6 text-xs sm:text-sm text-gray-500 leading-relaxed font-semibold">
+                      <div className="px-6 pb-6 text-xs sm:text-sm text-white/50 leading-relaxed font-semibold">
                         {f.a}
                       </div>
                     </motion.div>

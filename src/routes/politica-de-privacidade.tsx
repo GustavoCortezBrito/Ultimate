@@ -20,8 +20,8 @@ export const Route = createFileRoute("/politica-de-privacidade")({
 function Section({ title, children }: { title: string; children: React.ReactNode }) {
   return (
     <div className="space-y-3">
-      <h2 className="text-lg font-bold text-[#1d1d1f]">{title}</h2>
-      <div className="text-sm text-gray-600 leading-relaxed space-y-2 font-medium">{children}</div>
+      <h2 className="text-lg font-bold text-white">{title}</h2>
+      <div className="text-sm text-white/60 leading-relaxed space-y-2 font-medium">{children}</div>
     </div>
   );
 }
@@ -30,24 +30,24 @@ function PoliticaDePrivacidade() {
   return (
     <SubpageLayout title="Política de Privacidade">
       {/* Header */}
-      <div className="flex items-start gap-4 mb-10 pb-8 border-b border-[#e8e8ed]">
-        <div className="w-12 h-12 bg-[#D11919]/8 rounded-2xl flex items-center justify-center shrink-0 mt-1">
-          <Shield className="w-6 h-6 text-[#D11919]" />
+      <div className="flex items-start gap-4 mb-10 pb-8 border-b border-white/10">
+        <div className="w-12 h-12 bg-[#FF5722]/10 rounded-2xl flex items-center justify-center shrink-0 mt-1">
+          <Shield className="w-6 h-6 text-[#FF5722]" />
         </div>
         <div>
-          <h1 className="text-3xl sm:text-4xl font-bold text-[#1d1d1f] tracking-tight">
+          <h1 className="text-3xl sm:text-4xl font-bold text-white tracking-tight">
             Política de Privacidade
           </h1>
-          <p className="text-xs text-gray-400 font-semibold mt-2 uppercase tracking-wider">
+          <p className="text-xs text-white/40 font-semibold mt-2 uppercase tracking-wider">
             Última atualização: Junho de 2025
           </p>
         </div>
       </div>
 
       <div className="space-y-10 max-w-3xl">
-        <p className="text-sm text-gray-500 leading-relaxed font-medium bg-[#f8f8fa] rounded-2xl p-5 border border-[#e8e8ed]">
+        <p className="text-sm text-white/60 leading-relaxed font-medium bg-white/5 rounded-2xl p-5 border border-white/10">
           A sua privacidade é muito importante para nós. Esta política descreve como a{" "}
-          <strong className="text-[#1d1d1f]">ULTIMATE POWER DO BRASIL LTDA</strong> ("Ultimate Fitness",
+          <strong className="text-white">ULTIMATE POWER DO BRASIL LTDA</strong> ("Ultimate Fitness",
           "nós", "nosso") coleta, usa e protege as informações pessoais dos visitantes e clientes do
           nosso site.
         </p>
@@ -143,11 +143,11 @@ function PoliticaDePrivacidade() {
           <p>
             Para dúvidas ou solicitações relacionadas à privacidade de dados, entre em contato:
           </p>
-          <div className="bg-[#f8f8fa] rounded-2xl p-4 border border-[#e8e8ed] mt-2">
-            <p><strong>Empresa:</strong> ULTIMATE POWER DO BRASIL LTDA</p>
-            <p><strong>CNPJ:</strong> 57.491.644/0001-47</p>
-            <p><strong>Localização:</strong> Florianópolis / SC</p>
-            <p><strong>Canal:</strong> WhatsApp (disponível no site)</p>
+          <div className="bg-white/5 rounded-2xl p-4 border border-white/10 mt-2 text-white/70 space-y-1">
+            <p><strong className="text-white">Empresa:</strong> ULTIMATE POWER DO BRASIL LTDA</p>
+            <p><strong className="text-white">CNPJ:</strong> 57.491.644/0001-47</p>
+            <p><strong className="text-white">Localização:</strong> Florianópolis / SC</p>
+            <p><strong className="text-white">Canal:</strong> WhatsApp (disponível no site)</p>
           </div>
         </Section>
       </div>
