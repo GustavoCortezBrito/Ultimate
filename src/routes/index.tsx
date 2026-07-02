@@ -30,6 +30,7 @@ import { FAQ, faqs } from "@/components/FAQ";
 import { HowToBuy } from "@/components/HowToBuy";
 import { WhatsAppFloat } from "@/components/WhatsAppFloat";
 import { LoadingScreen } from "@/components/LoadingScreen";
+import { HeroParticles } from "@/components/HeroParticles";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -169,13 +170,14 @@ function Index() {
 
   return (
     <div className="min-h-screen bg-[#0e0e10] text-white overflow-x-hidden font-sans">
+      <HeroParticles />
       <LoadingScreen />
-      {/* Header — always dark-bg transparent, white nav */}
+      {/* Header — transparent at top, dark on scroll */}
       <header
         className={`fixed inset-x-0 z-50 transition-all duration-500 ${
           scrolled
             ? "top-0 bg-[#111113]/90 backdrop-blur-xl border-b border-white/10 py-3.5 shadow-lg"
-            : "top-0 bg-[#111113]/60 backdrop-blur-sm py-5"
+            : "top-0 bg-transparent py-5"
         }`}
       >
         <div className="max-w-6xl mx-auto px-4 sm:px-6 flex items-center justify-between">
@@ -247,7 +249,7 @@ function Index() {
         {/* HERO SECTION — Dark, grid layout */}
         <section
           id="inicio"
-          className="relative min-h-screen flex items-center bg-[#111113] overflow-hidden"
+          className="relative min-h-screen flex items-center bg-transparent overflow-hidden"
         >
           {/* Subtle red glow top-left */}
           <div className="absolute -top-32 -left-32 w-[600px] h-[600px] bg-[#D11919]/10 rounded-full blur-[120px] pointer-events-none" />
