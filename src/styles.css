@@ -53,6 +53,17 @@
 @layer base {
   * { border-color: var(--color-border); }
   html { scroll-behavior: smooth; }
+
+  /* Custom galaxy cursor */
+  html, body {
+    cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'><defs><linearGradient id='g' x1='0%' y1='0%' x2='100%' y2='100%'><stop offset='0%' stop-color='%23a855f7'/><stop offset='60%' stop-color='%236366f1'/><stop offset='100%' stop-color='%231e1b4b'/></linearGradient><filter id='s'><feDropShadow dx='0' dy='1' stdDeviation='0.5' flood-color='%23000' flood-opacity='0.5'/></filter></defs><path d='M 4 4 L 28 14 C 20 20, 12 22, 4 24 Z' fill='url(%23g)' stroke='%23ffffff' stroke-width='1.2' stroke-linejoin='round' filter='url(%23s)'/><circle cx='8' cy='10' r='0.6' fill='%23ffffff'/><circle cx='14' cy='12' r='0.4' fill='%23ffffff'/><circle cx='10' cy='16' r='0.5' fill='%23ffffff'/><circle cx='18' cy='15' r='0.6' fill='%23ffffff'/></svg>") 28 14, auto;
+  }
+
+  /* Custom cursor hover state for interactive elements */
+  a, button, [role="button"], input[type="submit"], select, summary, .cursor-pointer, a * {
+    cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'><defs><linearGradient id='g' x1='0%' y1='0%' x2='100%' y2='100%'><stop offset='0%' stop-color='%23ff5722'/><stop offset='60%' stop-color='%23ff8c55'/><stop offset='100%' stop-color='%23b91c1c'/></linearGradient><filter id='s'><feDropShadow dx='0' dy='1' stdDeviation='0.5' flood-color='%23000' flood-opacity='0.5'/></filter></defs><path d='M 4 4 L 28 14 C 20 20, 12 22, 4 24 Z' fill='url(%23g)' stroke='%23ffffff' stroke-width='1.2' stroke-linejoin='round' filter='url(%23s)'/><circle cx='8' cy='10' r='0.6' fill='%23ffffff'/><circle cx='14' cy='12' r='0.4' fill='%23ffffff'/></svg>") 28 14, pointer !important;
+  }
+
   body {
     background-color: var(--color-background);
     color: var(--color-foreground);
