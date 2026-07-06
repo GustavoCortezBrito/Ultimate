@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "../styles.css";
+import { CustomCursor } from "@/components/CustomCursor";
 
 export const metadata: Metadata = {
   title: "Ultimate Fitness | Mini Bike e Bicicleta Spinning para Casa",
@@ -40,6 +41,7 @@ export default function RootLayout({
         <link href="https://fonts.googleapis.com/css2?family=Antic+Slab&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
       </head>
       <body>
+        <CustomCursor />
         {children}
       </body>
     </html>
