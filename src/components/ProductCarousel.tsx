@@ -3,9 +3,10 @@
 import { useState } from "react";
 import { ChevronLeft, ChevronRight, ImageIcon } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import Image, { type StaticImageData } from "next/image";
 
 export type CarouselSlide = {
-  src?: string;
+  src?: string | StaticImageData;
   alt: string;
   label: string;
 };
@@ -40,18 +41,25 @@ export function ProductCarousel({ slides }: { slides: CarouselSlide[] }) {
     <div className="relative aspect-square bg-[#111113] overflow-hidden group rounded-3xl border border-white/5">
       <AnimatePresence initial={false} custom={dir}>
         {current.src ? (
-          <motion.img
+          <motion.div
             key={i}
-            src={current.src}
-            alt={current.alt}
             custom={dir}
             variants={variants}
             initial="enter"
             animate="center"
             exit="exit"
             transition={{ x: { type: "spring", stiffness: 280, damping: 30 }, opacity: { duration: 0.2 } }}
-            className="absolute inset-0 w-full h-full object-cover rounded-3xl"
-          />
+            className="absolute inset-0 w-full h-full"
+          >
+            <Image
+              src={current.src}
+              alt={current.alt}
+              fill
+              className="object-cover rounded-3xl"
+              sizes="(max-width: 768px) 100vw, 50vw"
+              priority={i === 0}
+            />
+          </motion.div>
         ) : (
           <motion.div
             key={i}
@@ -97,4 +105,3 @@ export function ProductCarousel({ slides }: { slides: CarouselSlide[] }) {
     </div>
   );
 }
-
