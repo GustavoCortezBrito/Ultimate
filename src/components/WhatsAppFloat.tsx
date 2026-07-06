@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 
-const PHONE = "5548XXXXXXXX"; // Substitua pelo número real
+const PHONE = "5548999998358";
 const BASE_MSG = encodeURIComponent("Olá! Gostaria de saber mais sobre os produtos Ultimate Fitness.");
 
 export function WhatsAppFloat() {
