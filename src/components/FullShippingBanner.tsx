@@ -1,3 +1,5 @@
+"use client";
+
 import { motion } from "framer-motion";
 import { Truck, ShieldCheck, RotateCcw, Zap } from "lucide-react";
 

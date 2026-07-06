@@ -1,5 +1,8 @@
+"use client";
+
 import { motion, AnimatePresence } from "framer-motion";
 import { useEffect, useState } from "react";
+import Image from "next/image";
 import logoAsset from "@/assets/ultimate-fitness-logo.png";
 
 export function LoadingScreen() {
@@ -62,10 +65,11 @@ export function LoadingScreen() {
                   background: "radial-gradient(circle, rgba(255,87,34,0.25) 0%, transparent 65%)",
                 }}
               />
-              <img
+              <Image
                 src={logoAsset}
                 alt="Ultimate Fitness"
                 className="h-16 sm:h-20 w-auto relative z-10 drop-shadow-[0_0_20px_rgba(255,87,34,0.45)]"
+                priority
               />
             </motion.div>
 

@@ -1,3 +1,5 @@
+"use client";
+
 import { useState } from "react";
 import { Check, ShoppingCart, ShieldCheck, Truck } from "lucide-react";
 import { ProductCarousel, type CarouselSlide } from "./ProductCarousel";

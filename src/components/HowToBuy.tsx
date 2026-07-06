@@ -1,3 +1,5 @@
+"use client";
+
 import { motion } from "framer-motion";
 import { Search, MousePointerClick, CreditCard, Package } from "lucide-react";
 

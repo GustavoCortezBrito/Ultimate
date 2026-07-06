@@ -1,3 +1,5 @@
+"use client";
+
 import { motion } from "framer-motion";
 
 const PHONE = "5548XXXXXXXX"; // Substitua pelo número real
