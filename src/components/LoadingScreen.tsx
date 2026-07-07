@@ -56,13 +56,13 @@ export function LoadingScreen() {
               transition={{ duration: 0.65, ease: [0.34, 1.4, 0.64, 1] }}
               className="relative"
             >
-              {/* Halo ring behind logo */}
+              {/* Halo ring behind logo (perfect circle, no stretching) */}
               <motion.div
-                animate={{ opacity: [0, 0.5, 0], scale: [0.85, 1.1, 0.85] }}
+                animate={{ opacity: [0, 0.6, 0], scale: [0.8, 1.1, 0.8] }}
                 transition={{ duration: 2.4, repeat: Infinity, ease: "easeInOut", delay: 0.3 }}
-                className="absolute inset-0 rounded-full"
+                className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-56 h-56 rounded-full pointer-events-none z-0"
                 style={{
-                  background: "radial-gradient(circle, rgba(255,87,34,0.25) 0%, transparent 65%)",
+                  background: "radial-gradient(circle, rgba(255,87,34,0.25) 0%, transparent 70%)",
                 }}
               />
               <Image

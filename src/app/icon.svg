@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
+  <defs>
+    <linearGradient id="boltGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#D11919" />
+      <stop offset="100%" stop-color="#FF5722" />
+    </linearGradient>
+  </defs>
+  <!-- Beautiful, balanced lightning bolt icon representing the Ultimate brand -->
+  <path d="M19 3 L9 17 H15.5 L13 29 L23 15 H16.5 Z" fill="url(#boltGrad)" />
+</svg>
