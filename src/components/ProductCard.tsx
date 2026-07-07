@@ -20,6 +20,7 @@ export type ProductCardProps = {
   originalPrice?: string;
   installments?: string;
   discountBadge?: string;
+  linkText?: string;
 };
 
 type Tab = "desc" | "specs" | "for";
@@ -39,6 +40,7 @@ export function ProductCard({
   originalPrice,
   installments,
   discountBadge,
+  linkText,
 }: ProductCardProps) {
   const [tab, setTab] = useState<Tab>("desc");
 
@@ -201,7 +203,7 @@ export function ProductCard({
             className="flex items-center justify-center gap-2.5 bg-gradient-to-r from-[#D11919] to-[#FF5722] text-white font-bold text-sm px-6 py-4 rounded-2xl w-full shadow-[0_4px_20px_rgba(255,87,34,0.3)] hover:shadow-[0_4px_28px_rgba(255,87,34,0.5)] transition-shadow cursor-pointer"
           >
             <ShoppingCart className="w-5 h-5 shrink-0" />
-            Comprar no Mercado Livre
+            {linkText || "Comprar no Mercado Livre"}
           </motion.a>
 
           <p className="text-[10px] text-center text-white/25 flex items-center justify-center gap-1.5 font-semibold uppercase tracking-wider">
@@ -240,6 +242,7 @@ export const miniBikeProduct: ProductCardProps = {
   rating: { stars: "4.8/5", sales: "+5 mil", reviews: "2.429" },
   link: "https://www.mercadolivre.com.br/ultimate-fitness-mini-bike-bicicleta-ergometrica/up/MLBU2934790909",
   slides: [],
+  linkText: "Comprar Mini Bike no Mercado Livre",
 };
 
 export const spinningProduct: ProductCardProps = {
@@ -272,4 +275,5 @@ export const spinningProduct: ProductCardProps = {
   rating: { stars: "4.6/5", sales: "+25", reviews: "7" },
   link: "https://www.mercadolivre.com.br/ultimate-fitness-bicicleta-ergometrica-spinning/up/MLBU3325822548",
   slides: [],
+  linkText: "Comprar Bicicleta Spinning no Mercado Livre",
 };
