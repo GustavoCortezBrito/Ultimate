@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   title: "Termos de Serviço | Ultimate Fitness",
   description: "Termos de Serviço da Ultimate Fitness — condições de uso do site e das compras realizadas por nossos canais.",
   alternates: {
-    canonical: "https://ultimate-home-fitness.lovable.app/termos-de-servico",
+    canonical: "/termos-de-servico",
   },
 };
 

@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://ultimate-home-fitness.lovable.app/sitemap.xml

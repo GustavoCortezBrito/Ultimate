@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   title: "Política de Privacidade | Ultimate Fitness",
   description: "Política de Privacidade da Ultimate Fitness — entenda como coletamos, usamos e protegemos seus dados pessoais.",
   alternates: {
-    canonical: "https://ultimate-home-fitness.lovable.app/politica-de-privacidade",
+    canonical: "/politica-de-privacidade",
   },
 };
 

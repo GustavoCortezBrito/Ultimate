@@ -65,6 +65,73 @@ export default function HomePage() {
 
   return (
     <div className="min-h-screen bg-[#0e0e10] text-white overflow-x-hidden font-sans">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify([
+            {
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              "name": "Ultimate Fitness",
+              "url": "https://ultimate-3.vercel.app",
+              "logo": "https://ultimate-3.vercel.app/icon.svg",
+              "description": "Mini bikes ergométricas e bicicletas spinning residenciais de alta qualidade para otimizar sua rotina fitness.",
+              "sameAs": [
+                "https://www.mercadolivre.com.br/ultimate-fitness-mini-bike-bicicleta-ergometrica/up/MLBU2934790909",
+                "https://www.mercadolivre.com.br/ultimate-fitness-bicicleta-ergometrica-spinning/up/MLBU3325822548"
+              ]
+            },
+            {
+              "@context": "https://schema.org",
+              "@type": "Product",
+              "name": "Mini Bike Bicicleta Ergométrica Ultimate Fitness",
+              "image": "https://ultimate-3.vercel.app/opengraph-image.png",
+              "description": "Mini bike ergométrica premium. Compacta, portátil e dobrável. Ideal para exercícios de membros inferiores e superiores, reabilitação e ganho de mobilidade.",
+              "brand": {
+                "@type": "Brand",
+                "name": "Ultimate Fitness"
+              },
+              "offers": {
+                "@type": "Offer",
+                "url": "https://www.mercadolivre.com.br/ultimate-fitness-mini-bike-bicicleta-ergometrica/up/MLBU2934790909",
+                "priceCurrency": "BRL",
+                "price": "164.90",
+                "itemCondition": "https://schema.org/NewCondition",
+                "availability": "https://schema.org/InStock"
+              },
+              "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": "4.8",
+                "reviewCount": "2429"
+              }
+            },
+            {
+              "@context": "https://schema.org",
+              "@type": "Product",
+              "name": "Bicicleta Ergométrica Spinning Ultimate Fitness",
+              "image": "https://ultimate-3.vercel.app/opengraph-image.png",
+              "description": "Bicicleta de spinning residencial de alta qualidade. Com guidão ajustável, assento confortável, e estrutura forte para suportar seus treinos de cardio em casa.",
+              "brand": {
+                "@type": "Brand",
+                "name": "Ultimate Fitness"
+              },
+              "offers": {
+                "@type": "Offer",
+                "url": "https://www.mercadolivre.com.br/ultimate-fitness-bicicleta-ergometrica-spinning/up/MLBU3325822548",
+                "priceCurrency": "BRL",
+                "price": "581.22",
+                "itemCondition": "https://schema.org/NewCondition",
+                "availability": "https://schema.org/InStock"
+              },
+              "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": "4.6",
+                "reviewCount": "7"
+              }
+            }
+          ])
+        }}
+      />
       <HeroParticles />
       <LoadingScreen />
 
