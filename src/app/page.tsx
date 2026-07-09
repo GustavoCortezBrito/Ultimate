@@ -421,8 +421,8 @@ export default function HomePage() {
               <p className="text-white font-bold text-sm uppercase tracking-wider">Links Rápidos</p>
               <ul className="space-y-2.5">
                 {[
-                  { label: "Início", href: "#inicio" }, { label: "Produtos", href: "#produtos" },
-                  { label: "Como Comprar", href: "#como-comprar" }, { label: "FAQ", href: "#faq" },
+                  { label: "Ir ao Início", href: "#inicio" }, { label: "Ver Produtos", href: "#produtos" },
+                  { label: "Saiba Como Comprar", href: "#como-comprar" }, { label: "Perguntas Frequentes", href: "#faq" },
                   { label: "Sobre a Ultimate", href: "#sobre" },
                 ].map((link, i) => (
                   <motion.li key={link.label} initial={{ opacity: 0, x: -16 }} whileInView={{ opacity: 1, x: 0 }}
