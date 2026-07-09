@@ -29,6 +29,10 @@ export const faqs = [
     q: "Como faço para comprar com segurança?",
     a: 'Todas as nossas vendas são realizadas exclusivamente pelo Mercado Livre, a maior plataforma de e-commerce da América Latina. Isso garante pagamento seguro, rastreamento da entrega, Compra Garantida e suporte em caso de qualquer problema. Basta clicar em "Comprar no Mercado Livre" no produto desejado e seguir o processo seguro da plataforma.',
   },
+  {
+    q: "Qual a diferença entre a Mini Bike e a Mini Bike Pro?",
+    a: "A Mini Bike Pro é o nosso modelo mais recente e robusto. Com 3.2 kg (contra 2.6 kg da versão original) e dimensões ligeiramente maiores (35×32×42cm), ela oferece maior estabilidade durante o uso e uma estrutura reforçada de aço e ABS. Ambas são portáteis, silenciosas e ideais para uso sentado, mas a Pro é indicada para quem busca ainda mais solidez e durabilidade.",
+  },
 ];
 
 export function FAQ() {

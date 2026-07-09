@@ -12,8 +12,8 @@ import heroImg from "@/assets/product_real.png";
 import brandOfficeImg from "@/assets/brand_office.png";
 import logoAsset from "@/assets/ultimate-fitness-logo.png";
 import { FullShippingBanner } from "@/components/FullShippingBanner";
-import { ProductCard, miniBikeProduct, spinningProduct } from "@/components/ProductCard";
-import { miniBikeSlides, spinningSlides } from "@/data/products";
+import { ProductCard, miniBikeProduct, spinningProduct, miniBike2Product } from "@/components/ProductCard";
+import { miniBikeSlides, spinningSlides, miniBike2Slides } from "@/data/products";
 import { SocialProofCounter } from "@/components/SocialProofCounter";
 import { Testimonials } from "@/components/Testimonials";
 import { FAQ, faqs } from "@/components/FAQ";
@@ -78,7 +78,8 @@ export default function HomePage() {
               "description": "Mini bikes ergométricas e bicicletas spinning residenciais de alta qualidade para otimizar sua rotina fitness.",
               "sameAs": [
                 "https://www.mercadolivre.com.br/ultimate-fitness-mini-bike-bicicleta-ergometrica/up/MLBU2934790909",
-                "https://www.mercadolivre.com.br/ultimate-fitness-bicicleta-ergometrica-spinning/up/MLBU3325822548"
+                "https://www.mercadolivre.com.br/ultimate-fitness-bicicleta-ergometrica-spinning/up/MLBU3325822548",
+                "https://www.mercadolivre.com.br/ultimate-fitness-mini-bike-bicicleta-ergometrica/up/MLBU2954483127"
               ]
             },
             {
@@ -127,6 +128,30 @@ export default function HomePage() {
                 "@type": "AggregateRating",
                 "ratingValue": "4.6",
                 "reviewCount": "7"
+              }
+            },
+            {
+              "@context": "https://schema.org",
+              "@type": "Product",
+              "name": "Mini Bike Bicicleta Ergométrica Pro Ultimate Fitness",
+              "image": "https://ultimate-3.vercel.app/opengraph-image.png",
+              "description": "Mini bike ergométrica Pro com monitor LCD e estrutura reforçada de aço carbono e ABS. Ideal para exercícios de pernas e braços, fisioterapia e reabilitação.",
+              "brand": {
+                "@type": "Brand",
+                "name": "Ultimate Fitness"
+              },
+              "offers": {
+                "@type": "Offer",
+                "url": "https://www.mercadolivre.com.br/ultimate-fitness-mini-bike-bicicleta-ergometrica/up/MLBU2954483127",
+                "priceCurrency": "BRL",
+                "price": "185.00",
+                "itemCondition": "https://schema.org/NewCondition",
+                "availability": "https://schema.org/InStock"
+              },
+              "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": "4.8",
+                "reviewCount": "771"
               }
             }
           ])
@@ -254,9 +279,10 @@ export default function HomePage() {
                 Adquira diretamente pela plataforma do Mercado Livre com envio expresso e suporte nacional completo.
               </p>
             </div>
-            <div className="grid md:grid-cols-2 gap-8 items-stretch">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 items-stretch">
               <ProductCard {...miniBikeProduct} slides={miniBikeSlides} />
               <ProductCard {...spinningProduct} slides={spinningSlides} />
+              <ProductCard {...miniBike2Product} slides={miniBike2Slides} />
             </div>
           </div>
         </section>

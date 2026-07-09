@@ -11,6 +11,12 @@ import spinning4 from "@/assets/spinning-3.png";
 import spinning5 from "@/assets/spinning-4.png";
 import spinning6 from "@/assets/spinning-5.jpg";
 
+import miniBikePro1 from "@/assets/mini-bike-pro-1.png";
+import miniBikePro2 from "@/assets/mini-bike-pro-2.png";
+import miniBikePro3 from "@/assets/mini-bike-pro-3.png";
+import miniBikePro4 from "@/assets/mini-bike-pro-4.png";
+import miniBikePro5 from "@/assets/mini-bike-pro-5.png";
+
 import type { CarouselSlide } from "@/components/ProductCarousel";
 
 export const ML_LINKS = {
@@ -35,4 +41,12 @@ export const spinningSlides: CarouselSlide[] = [
   { src: spinning4, alt: "Dimensões e regulagens de guidão e banco da bicicleta spinning", label: "Dimensões e regulagens" },
   { src: spinning5, alt: "Especificações e performance da bicicleta de spinning", label: "Ficha técnica de performance" },
   { src: spinning6, alt: "Diferentes ambientes de uso residencial e home office", label: "Uso em casa e escritório" },
+];
+
+export const miniBike2Slides: CarouselSlide[] = [
+  { src: miniBikePro1, alt: "Mini Bike Ergométrica Pro Ultimate Fitness — imagem principal", label: "Imagem principal do produto" },
+  { src: miniBikePro2, alt: "Mini Bike Pro Ultimate Fitness — vista lateral", label: "Vista lateral" },
+  { src: miniBikePro3, alt: "Mini Bike Pro Ultimate Fitness — especificações técnicas", label: "Especificações técnicas" },
+  { src: miniBikePro4, alt: "Mini Bike Pro Ultimate Fitness — painel e controles", label: "Painel e controles" },
+  { src: miniBikePro5, alt: "Mini Bike Pro Ultimate Fitness — produto em uso", label: "Produto em uso" },
 ];

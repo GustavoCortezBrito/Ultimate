@@ -64,7 +64,7 @@ export function HowToBuy() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.4 }}
-          className="mt-16 flex flex-col sm:flex-row gap-4 justify-center"
+          className="mt-16 flex flex-col sm:flex-row gap-4 justify-center flex-wrap"
         >
           <a
             href="https://www.mercadolivre.com.br/ultimate-fitness-mini-bike-bicicleta-ergometrica/up/MLBU2934790909"
@@ -81,6 +81,14 @@ export function HowToBuy() {
             className="bg-white/5 border border-white/15 hover:bg-white/10 text-white/80 font-bold text-sm px-8 py-3.5 rounded-full transition-all text-center"
           >
             Ver Spinning no Mercado Livre
+          </a>
+          <a
+            href="https://www.mercadolivre.com.br/ultimate-fitness-mini-bike-bicicleta-ergometrica/up/MLBU2954483127"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-white/5 border border-white/15 hover:bg-white/10 text-white/80 font-bold text-sm px-8 py-3.5 rounded-full transition-all text-center"
+          >
+            Ver Mini Bike Pro no Mercado Livre
           </a>
         </motion.div>
       </div>

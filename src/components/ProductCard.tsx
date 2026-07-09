@@ -228,7 +228,7 @@ export const miniBikeProduct: ProductCardProps = {
     { label: "Material", value: "De Aço, ABS" },
     { label: "Peso do Aparelho", value: "2.6 kg" },
     { label: "Dimensões", value: "32cm (A) × 20cm (L) × 40cm (C)" },
-    { label: "Garantia", value: "3 meses" },
+    { label: "Garantia", value: "30 dias" },
   ],
   audience: {
     title: "Indicado para:",
@@ -261,12 +261,12 @@ export const spinningProduct: ProductCardProps = {
     { label: "Benefício", value: "Treino sem impacto e melhora da saúde" },
     { label: "Cor", value: "Vermelho" },
     { label: "Alimentação do Painel", value: "Pilhas" },
-    { label: "Garantia", value: "3 meses" },
+    { label: "Garantia", value: "30 dias" },
   ],
   audience: {
     title: "Indicado para:",
     items: [
-      "Exercícios cardiovasculares intensos em casa",
+      "Pedalar em casa com conforto e sem impacto",
       "Treinar sem impacto e melhorar a saúde integral",
       "Simular treinos de ciclismo indoor",
       "Uso em apartamentos por ser extremamente silenciosa",
@@ -276,4 +276,39 @@ export const spinningProduct: ProductCardProps = {
   link: "https://www.mercadolivre.com.br/ultimate-fitness-bicicleta-ergometrica-spinning/up/MLBU3325822548",
   slides: [],
   linkText: "Comprar Bicicleta Spinning no Mercado Livre",
+};
+
+export const miniBike2Product: ProductCardProps = {
+  title: "Mini Bike Bicicleta Ergométrica Pro",
+  subtitle: "Ultimate Fitness — Portátil · Tela LCD · Aço Carbono",
+  description: "Mini bike ergométrica com monitor LCD (tempo, calorias e giros) e estrutura de aço carbono e ABS. Ideal para exercícios de pernas e braços, fisioterapia e reabilitação. Sem restrição de peso — o exercício é realizado sentado.",
+  tag: "Novo",
+  badges: ["Envio Full", "+1.000 vendidos", "4.8★", "Portátil", "LCD", "Aço Carbono"],
+  price: "R$ 185,00",
+  originalPrice: "R$ 217,00",
+  discountBadge: "15% OFF",
+  installments: "12x de R$ 18,31",
+  specs: [
+    { label: "Finalidade", value: "Para exercício, reabilitação" },
+    { label: "Material", value: "Aço Carbono e ABS" },
+    { label: "Peso do Aparelho", value: "3.2 kg" },
+    { label: "Dimensões", value: "35cm (A) × 32cm (L) × 42cm (C)" },
+    { label: "Tela LCD", value: "Tempo, calorias e giros" },
+    { label: "Portátil", value: "Sim" },
+    { label: "Cor", value: "Preto" },
+    { label: "Garantia", value: "30 dias" },
+  ],
+  audience: {
+    title: "Indicado para:",
+    items: [
+      "Exercícios físicos e reabilitação motora",
+      "Treinar mobilidade de pernas e braços sentado",
+      "Pessoas idosas e quem está em fisioterapia",
+      "Fácil de transportar e guardar no lar",
+    ],
+  },
+  rating: { stars: "4.8/5", sales: "+1.000", reviews: "771" },
+  link: "https://www.mercadolivre.com.br/ultimate-fitness-mini-bike-bicicleta-ergometrica/up/MLBU2954483127",
+  slides: [],
+  linkText: "Comprar Mini Bike Pro no Mercado Livre",
 };

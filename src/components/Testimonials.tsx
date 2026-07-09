@@ -28,6 +28,18 @@ const testimonials = [
     product: "Bicicleta Spinning",
     text: "Excelente custo-benefício. Design bonito, estrutura robusta e o painel funciona perfeitamente. Moro em apartamento e não faz barulho nenhum — nem de madrugada incomoda. Nota 10 para a Ultimate Fitness!",
   },
+  {
+    name: "Cláudia S.",
+    city: "Brasília, DF",
+    product: "Mini Bike Pro",
+    text: "A Mini Bike Pro chegou rápido e bem embalada. Senti uma diferença clara em relação a outras que já vi — mais robusta, mais estável e com acabamento superior. Uso na mesa do escritório e não atrapalha nem um pouco. Ótima compra!",
+  },
+  {
+    name: "Anderson V.",
+    city: "Salvador, BA",
+    product: "Mini Bike Pro",
+    text: "Comprei como presente para a minha esposa e ela amou! A estrutura é mais firme que eu esperava para uma mini bike. O pedal é suave, sem barulho, e o ajuste de resistência funciona bem. Recomendo muito!",
+  },
 ];
 
 export function Testimonials() {
@@ -50,7 +62,7 @@ export function Testimonials() {
         </motion.div>
 
         {/* Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {testimonials.map((t, idx) => (
             <motion.article
               key={t.name}
