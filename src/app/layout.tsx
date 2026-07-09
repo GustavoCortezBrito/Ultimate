@@ -10,7 +10,7 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   title: "Ultimate Fitness | Mini Bike e Bicicleta Spinning para Casa",
   description: "Mini bike e bicicleta spinning Ultimate Fitness de alta qualidade. Adquira com envio expresso Full e compra protegida no Mercado Livre.",
-  metadataBase: new URL("https://ultimate-3.vercel.app"),
+  metadataBase: new URL("https://www.ultimatefitness.com.br"),
   keywords: [
     "mini bike",
     "bicicleta spinning",
@@ -26,23 +26,18 @@ export const metadata: Metadata = {
     canonical: "/",
   },
   icons: {
-    icon: [
-      { url: "/icon.svg", type: "image/svg+xml" }
-    ],
-    apple: [
-      { url: "/icon.svg", type: "image/svg+xml" }
-    ]
+    icon: "/favicon.ico",
   },
   openGraph: {
     type: "website",
     locale: "pt_BR",
-    url: "https://ultimate-3.vercel.app",
+    url: "https://www.ultimatefitness.com.br",
     title: "Ultimate Fitness | Equipamentos de Exercício para Casa",
     description: "Mini bike e bicicleta spinning de alta qualidade. Adquira com envio expresso Full e compra protegida no Mercado Livre.",
     siteName: "Ultimate Fitness",
     images: [
       {
-        url: "https://ultimate-3.vercel.app/opengraph-image.png",
+        url: "https://www.ultimatefitness.com.br/opengraph-image.png",
         width: 1200,
         height: 630,
         alt: "Ultimate Fitness | Equipamentos de Exercício para Casa"
@@ -53,7 +48,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Ultimate Fitness | Equipamentos de Exercício para Casa",
     description: "Treine em casa com equipamentos de verdade. Mini bike e bicicleta spinning de alta qualidade no Mercado Livre.",
-    images: ["https://ultimate-3.vercel.app/opengraph-image.png"],
+    images: ["https://www.ultimatefitness.com.br/opengraph-image.png"],
   },
   robots: {
     index: true,

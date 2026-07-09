@@ -73,8 +73,8 @@ export default function HomePage() {
               "@context": "https://schema.org",
               "@type": "Organization",
               "name": "Ultimate Fitness",
-              "url": "https://ultimate-3.vercel.app",
-              "logo": "https://ultimate-3.vercel.app/icon.svg",
+              "url": "https://www.ultimatefitness.com.br",
+              "logo": "https://www.ultimatefitness.com.br/icon.svg",
               "description": "Mini bikes ergométricas e bicicletas spinning residenciais de alta qualidade para otimizar sua rotina fitness.",
               "sameAs": [
                 "https://www.mercadolivre.com.br/ultimate-fitness-mini-bike-bicicleta-ergometrica/up/MLBU2934790909",
@@ -86,7 +86,7 @@ export default function HomePage() {
               "@context": "https://schema.org",
               "@type": "Product",
               "name": "Mini Bike Bicicleta Ergométrica Ultimate Fitness",
-              "image": "https://ultimate-3.vercel.app/opengraph-image.png",
+              "image": "https://www.ultimatefitness.com.br/opengraph-image.png",
               "description": "Mini bike ergométrica premium. Compacta, portátil e dobrável. Ideal para exercícios de membros inferiores e superiores, reabilitação e ganho de mobilidade.",
               "brand": {
                 "@type": "Brand",
@@ -110,7 +110,7 @@ export default function HomePage() {
               "@context": "https://schema.org",
               "@type": "Product",
               "name": "Bicicleta Ergométrica Spinning Ultimate Fitness",
-              "image": "https://ultimate-3.vercel.app/opengraph-image.png",
+              "image": "https://www.ultimatefitness.com.br/opengraph-image.png",
               "description": "Bicicleta de spinning residencial de alta qualidade. Com guidão ajustável, assento confortável, e estrutura forte para suportar seus treinos de cardio em casa.",
               "brand": {
                 "@type": "Brand",
@@ -134,7 +134,7 @@ export default function HomePage() {
               "@context": "https://schema.org",
               "@type": "Product",
               "name": "Mini Bike Bicicleta Ergométrica Pro Ultimate Fitness",
-              "image": "https://ultimate-3.vercel.app/opengraph-image.png",
+              "image": "https://www.ultimatefitness.com.br/opengraph-image.png",
               "description": "Mini bike ergométrica Pro com monitor LCD e estrutura reforçada de aço carbono e ABS. Ideal para exercícios de pernas e braços, fisioterapia e reabilitação.",
               "brand": {
                 "@type": "Brand",
@@ -309,7 +309,7 @@ export default function HomePage() {
                     <f.icon className="w-5.5 h-5.5" />
                   </div>
                   <div className="space-y-1.5">
-                    <h3 className="font-bold text-white text-base group-hover:text-[#FF5722] transition-colors">{f.title}</h3>
+                    <p className="font-bold text-white text-base group-hover:text-[#FF5722] transition-colors">{f.title}</p>
                     <p className="text-xs sm:text-sm text-white/50 leading-relaxed font-semibold">{f.text}</p>
                   </div>
                 </div>
@@ -393,22 +393,22 @@ export default function HomePage() {
               <div className="space-y-2 pt-3 border-t border-white/5">
                 <span className="text-[10px] font-bold text-white/40 uppercase tracking-wider block">Compartilhar Site</span>
                 <div className="flex gap-2">
-                  <a href="https://api.whatsapp.com/send?text=Treine%20em%20casa%20com%20os%20equipamentos%20de%20verdade%20da%20Ultimate%20Fitness!%20Acesse%3A%20https%3A%2F%2Fultimate-3.vercel.app"
+                  <a href="https://api.whatsapp.com/send?text=Treine%20em%20casa%20com%20os%20equipamentos%20de%20verdade%20da%20Ultimate%20Fitness!%20Acesse%3A%20https%3A%2F%2Fwww.ultimatefitness.com.br"
                     target="_blank" rel="noopener noreferrer" aria-label="Compartilhar no WhatsApp"
                     className="w-8 h-8 bg-white/5 hover:bg-green-600 text-white/60 hover:text-white rounded-full flex items-center justify-center transition-colors duration-300">
                     <svg viewBox="0 0 24 24" className="w-4 h-4" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.338 5.393 0 11.956 0a11.81 11.81 0 018.449 3.502 11.758 11.758 0 013.486 8.44c-.005 6.557-5.338 11.895-11.9 11.895-2.007 0-3.972-.51-5.69-1.488L0 24zm6.305-1.654a10.82 10.82 0 005.651 1.6h.005c5.961 0 10.812-4.86 10.816-10.823.003-2.89-1.12-5.607-3.163-7.653A10.748 10.748 0 0011.96 2.378c-5.964 0-10.814 4.862-10.819 10.825a10.77 10.77 0 001.524 5.56l-.234.853 1.054-3.856.242.392a10.823 10.823 0 004.935 1.593z" /></svg>
                   </a>
-                  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fultimate-3.vercel.app"
+                  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.ultimatefitness.com.br"
                     target="_blank" rel="noopener noreferrer" aria-label="Compartilhar no Facebook"
                     className="w-8 h-8 bg-white/5 hover:bg-blue-600 text-white/60 hover:text-white rounded-full flex items-center justify-center transition-colors duration-300">
                     <svg viewBox="0 0 24 24" className="w-4 h-4" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" /></svg>
                   </a>
-                  <a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fultimate-3.vercel.app&text=Treine%20em%20casa%20com%20os%20equipamentos%20de%20verdade%20da%20Ultimate%20Fitness!"
+                  <a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fwww.ultimatefitness.com.br&text=Treine%20em%20casa%20com%20os%20equipamentos%20de%20verdade%20da%20Ultimate%20Fitness!"
                     target="_blank" rel="noopener noreferrer" aria-label="Compartilhar no X"
                     className="w-8 h-8 bg-white/5 hover:bg-black text-white/60 hover:text-white rounded-full flex items-center justify-center transition-colors duration-300">
                     <svg viewBox="0 0 24 24" className="w-4 h-4" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" /></svg>
                   </a>
-                  <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fultimate-3.vercel.app"
+                  <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.ultimatefitness.com.br"
                     target="_blank" rel="noopener noreferrer" aria-label="Compartilhar no LinkedIn"
                     className="w-8 h-8 bg-white/5 hover:bg-blue-700 text-white/60 hover:text-white rounded-full flex items-center justify-center transition-colors duration-300">
                     <svg viewBox="0 0 24 24" className="w-4 h-4" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" /></svg>
@@ -418,7 +418,7 @@ export default function HomePage() {
             </div>
 
             <div className="space-y-4">
-              <h4 className="text-white font-bold text-sm uppercase tracking-wider">Links Rápidos</h4>
+              <p className="text-white font-bold text-sm uppercase tracking-wider">Links Rápidos</p>
               <ul className="space-y-2.5">
                 {[
                   { label: "Início", href: "#inicio" }, { label: "Produtos", href: "#produtos" },
@@ -436,7 +436,7 @@ export default function HomePage() {
             </div>
 
             <div className="space-y-4">
-              <h4 className="text-white font-bold text-sm uppercase tracking-wider">Páginas</h4>
+              <p className="text-white font-bold text-sm uppercase tracking-wider">Páginas</p>
               <ul className="space-y-2.5">
                 {[
                   { label: "Política de Privacidade", href: "/politica-de-privacidade" },
@@ -453,7 +453,7 @@ export default function HomePage() {
             </div>
 
             <div className="space-y-4">
-              <h4 className="text-white font-bold text-sm uppercase tracking-wider">Contato</h4>
+              <p className="text-white font-bold text-sm uppercase tracking-wider">Contato</p>
               <ul className="space-y-4">
                 <motion.li initial={{ opacity: 0, y: 8 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
                   className="flex items-start gap-3 text-gray-400 text-sm font-medium">

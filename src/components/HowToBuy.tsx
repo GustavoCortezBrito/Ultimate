@@ -47,9 +47,9 @@ export function HowToBuy() {
                 <span className="text-3xl font-bold text-[#FF5722]/30 select-none">{step}</span>
               </div>
               <div className="space-y-2">
-                <h3 className="text-white font-bold text-lg leading-snug group-hover:text-[#FF5722] transition-colors">
+                <p className="text-white font-bold text-lg leading-snug group-hover:text-[#FF5722] transition-colors">
                   {title}
-                </h3>
+                </p>
                 <p className="text-white/50 text-xs sm:text-sm leading-relaxed font-medium">
                   {desc}
                 </p>

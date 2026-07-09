@@ -1,7 +1,7 @@
 import type { MetadataRoute } from "next";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://ultimate-3.vercel.app";
+  const baseUrl = "https://www.ultimatefitness.com.br";
 
   return [
     {

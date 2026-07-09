@@ -44,7 +44,7 @@ export function FullShippingBanner() {
                 <Icon className="w-5 h-5" />
               </div>
               <div className="space-y-1.5">
-                <h3 className="font-bold text-sm text-white group-hover:text-[#FF5722] transition-colors">{title}</h3>
+                <p className="font-bold text-sm text-white group-hover:text-[#FF5722] transition-colors">{title}</p>
                 <p className="text-xs sm:text-sm text-white/50 leading-relaxed font-medium">{desc}</p>
               </div>
             </motion.div>
