@@ -193,6 +193,7 @@ export default function HomePage() {
           {mobileOpen && (
             <motion.nav initial={{ height: 0, opacity: 0 }} animate={{ height: "auto", opacity: 1 }}
               exit={{ height: 0, opacity: 0 }} transition={{ duration: 0.2 }}
+              aria-hidden="true"
               className="md:hidden overflow-hidden border-t border-white/10 bg-[#111113]/95 backdrop-blur-xl">
               <div className="px-4 py-4 flex flex-col gap-1">
                 {nav.map((n) => (
@@ -242,11 +243,11 @@ export default function HomePage() {
                   className="flex flex-wrap gap-4 pt-2 select-none">
                   <a href="#produtos"
                     className="inline-flex items-center gap-2 bg-gradient-to-r from-[#D11919] to-[#FF5722] text-white font-bold text-sm px-8 py-4 rounded-full shadow-lg hover:shadow-xl hover:scale-[1.02] transition-all">
-                    <ShoppingBag className="w-5 h-5 shrink-0" /> Ver Produtos <ArrowRight className="w-4 h-4" />
+                    <ShoppingBag className="w-5 h-5 shrink-0" /> Explorar Produtos <ArrowRight className="w-4 h-4" />
                   </a>
                   <a href="#sobre"
                     className="inline-flex items-center gap-2 bg-white/8 border border-white/15 text-white/80 font-bold px-8 py-4 rounded-full hover:bg-white/15 transition-all">
-                    Sobre a Ultimate
+                    Conheça a Ultimate
                   </a>
                 </motion.div>
               </div>

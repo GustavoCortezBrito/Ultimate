@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import "../styles.css";
+import GoogleTags from "@/components/GoogleTags";
 
 export const viewport: Viewport = {
   themeColor: "#FF5722",
@@ -79,6 +80,7 @@ export default function RootLayout({
         <link href="https://fonts.googleapis.com/css2?family=Antic+Slab&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
       </head>
       <body>
+        <GoogleTags />
         {children}
       </body>
     </html>
