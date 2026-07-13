@@ -25,10 +25,19 @@ export function ProductCardWithML({ mlProductKey, ...productProps }: ProductCard
     async function fetchMLData() {
       try {
         const response = await fetch("/api/ml-products");
+        
+        if (!response.ok) {
+          console.error("Erro na API:", response.status);
+          setLoading(false);
+          return;
+        }
+
         const result = await response.json();
 
-        if (result.success && result.data[mlProductKey]) {
+        if (result.success && result.data && result.data[mlProductKey]) {
           setMlData(result.data[mlProductKey]);
+        } else {
+          console.warn("Produto não encontrado na resposta:", mlProductKey);
         }
       } catch (error) {
         console.error("Erro ao buscar dados do ML:", error);
@@ -52,7 +61,7 @@ export function ProductCardWithML({ mlProductKey, ...productProps }: ProductCard
 
   // Formata preços
   const formattedPrice = `R$ ${mlData.price.toFixed(2).replace(".", ",")}`;
-  const formattedOriginalPrice = mlData.originalPrice 
+  const formattedOriginalPrice = mlData.originalPrice && mlData.originalPrice > mlData.price
     ? `R$ ${mlData.originalPrice.toFixed(2).replace(".", ",")}` 
     : undefined;
 
@@ -62,11 +71,11 @@ export function ProductCardWithML({ mlProductKey, ...productProps }: ProductCard
 
   // Atualiza rating com dados reais
   const updatedRating = {
-    stars: mlData.ratingAverage ? `${mlData.ratingAverage.toFixed(1)}/5` : productProps.rating?.stars,
+    stars: mlData.ratingAverage ? `${mlData.ratingAverage.toFixed(1)}/5` : productProps.rating?.stars || "4.8/5",
     sales: mlData.soldQuantity > 1000 
       ? `+${Math.floor(mlData.soldQuantity / 1000)} mil` 
-      : `+${mlData.soldQuantity}`,
-    reviews: mlData.reviewsTotal?.toString() || productProps.rating?.reviews,
+      : mlData.soldQuantity > 0 ? `+${mlData.soldQuantity}` : productProps.rating?.sales || "+100",
+    reviews: mlData.reviewsTotal?.toString() || productProps.rating?.reviews || "0",
   };
 
   // Atualiza badges com dados reais
