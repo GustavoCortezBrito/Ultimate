@@ -30,10 +30,11 @@ export interface MLProduct {
 /**
  * Extrai o ID do produto de uma URL do Mercado Livre
  * Exemplo: https://www.mercadolivre.com.br/.../MLB123456789 -> MLB123456789
+ * Exemplo: https://www.mercadolivre.com.br/.../up/MLBU123456789 -> MLBU123456789
  */
 export function extractMLBId(url: string): string | null {
-  // Regex para capturar IDs do Mercado Livre (MLB seguido de números)
-  const match = url.match(/MLB\d+/);
+  // Regex para capturar IDs do Mercado Livre (MLB ou MLBU seguido de números)
+  const match = url.match(/MLB[UB]?\d+/);
   return match ? match[0] : null;
 }
 
