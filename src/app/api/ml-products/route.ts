@@ -2,6 +2,9 @@ import { NextResponse } from "next/server";
 import * as cheerio from "cheerio";
 import { ML_LINKS } from "@/data/products";
 
+// Força uso do Node.js runtime (necessário para cheerio)
+export const runtime = 'nodejs';
+
 /**
  * API Route para buscar dados atualizados do Mercado Livre via web scraping
  * GET /api/ml-products - Retorna dados atualizados de todos os produtos
@@ -24,44 +27,61 @@ async function scrapeMLProduct(url: string) {
     const html = await response.text();
     const $ = cheerio.load(html);
 
-    // Extrai dados da página
-    const price = $('meta[property="product:price:amount"]').attr('content') ||
-                  $('.price-tag-fraction').first().text().trim();
+    // Extrai preço - tenta vários seletores
+    let priceText = $('meta[property="product:price:amount"]').attr('content') ||
+                    $('.andes-money-amount__fraction').first().text().trim() ||
+                    $('.price-tag-fraction').first().text().trim() ||
+                    $('[class*="price"]').first().text().trim();
+    
+    // Remove tudo exceto números e vírgula/ponto
+    priceText = priceText.replace(/[^\d.,]/g, '').replace(',', '.');
+    const price = parseFloat(priceText) || 0;
+
+    if (price === 0) {
+      console.warn(`Preço não encontrado para ${url}`);
+    }
     
     const title = $('meta[property="og:title"]').attr('content') ||
-                  $('h1').first().text().trim();
+                  $('h1').first().text().trim() ||
+                  'Produto';
 
     // Tenta extrair preço original (se houver desconto)
-    const originalPrice = $('.andes-money-amount--previous').first().text().trim();
+    const originalPriceText = $('.andes-money-amount--previous').first().text().trim() ||
+                              $('[class*="original"]').first().text().trim();
+    const originalPrice = originalPriceText ? parseFloat(originalPriceText.replace(/[^\d.,]/g, '').replace(',', '.')) : undefined;
     
     // Extrai quantidade vendida
-    const soldText = $('.ui-pdp-subtitle').text();
+    const soldText = $('.ui-pdp-subtitle, [class*="sold"]').text();
     const soldMatch = soldText.match(/(\d+)\s*vendid/i);
     const soldQuantity = soldMatch ? parseInt(soldMatch[1]) : 0;
 
     // Extrai rating
-    const ratingText = $('[class*="rating"]').first().text();
+    const ratingText = $('[class*="rating"], .ui-pdp-review__rating').text();
     const ratingMatch = ratingText.match(/(\d+\.?\d*)/);
     const ratingAverage = ratingMatch ? parseFloat(ratingMatch[1]) : undefined;
 
     // Extrai total de reviews
-    const reviewsText = $('[class*="review"]').text();
+    const reviewsText = $('[class*="review"], .ui-pdp-review__amount').text();
     const reviewsMatch = reviewsText.match(/(\d+)/);
     const reviewsTotal = reviewsMatch ? parseInt(reviewsMatch[1]) : undefined;
 
     // Verifica se tem frete grátis
-    const freeShipping = html.includes('Frete grátis') || html.includes('FREE_SHIPPING');
+    const freeShipping = html.includes('Frete grátis') || 
+                        html.includes('FREE_SHIPPING') || 
+                        html.includes('free_shipping');
+
+    console.log(`[SCRAPER] Produto: ${title}, Preço: R$ ${price}`);
 
     return {
       title,
-      price: parseFloat(price.replace(/[^\d,]/g, '').replace(',', '.')),
-      originalPrice: originalPrice ? parseFloat(originalPrice.replace(/[^\d,]/g, '').replace(',', '.')) : undefined,
+      price,
+      originalPrice,
       soldQuantity,
       ratingAverage,
       reviewsTotal,
       freeShipping,
       availableQuantity: 999, // Não tem como saber via scraping
-      status: 'active',
+      status: price > 0 ? 'active' : 'inactive',
       lastUpdated: new Date().toISOString(),
     };
   } catch (error) {
