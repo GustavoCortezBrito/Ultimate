@@ -13,6 +13,7 @@ import brandOfficeImg from "@/assets/brand_office.png";
 import logoAsset from "@/assets/ultimate-fitness-logo.png";
 import { FullShippingBanner } from "@/components/FullShippingBanner";
 import { ProductCard, miniBikeProduct, spinningProduct, miniBike2Product } from "@/components/ProductCard";
+import { ProductCardWithML } from "@/components/ProductCardWithML";
 import { miniBikeSlides, spinningSlides, miniBike2Slides } from "@/data/products";
 import { SocialProofCounter } from "@/components/SocialProofCounter";
 import { Testimonials } from "@/components/Testimonials";
@@ -281,9 +282,9 @@ export default function HomePage() {
               </p>
             </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 items-stretch">
-              <ProductCard {...miniBikeProduct} slides={miniBikeSlides} />
-              <ProductCard {...spinningProduct} slides={spinningSlides} />
-              <ProductCard {...miniBike2Product} slides={miniBike2Slides} />
+              <ProductCardWithML {...miniBikeProduct} slides={miniBikeSlides} mlProductKey="miniBike" />
+              <ProductCardWithML {...spinningProduct} slides={spinningSlides} mlProductKey="spinning" />
+              <ProductCardWithML {...miniBike2Product} slides={miniBike2Slides} mlProductKey="miniBike2" />
             </div>
           </div>
         </section>

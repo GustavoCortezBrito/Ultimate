@@ -6,23 +6,21 @@ import { ML_LINKS } from "@/data/products";
  * Cron Job para atualizar dados do Mercado Livre automaticamente
  * Será executado 1x por dia pela Vercel Cron
  * 
- * Para configurar no vercel.json:
- * {
- *   "crons": [{
- *     "path": "/api/cron/update-ml",
- *     "schedule": "0 3 * * *"
- *   }]
- * }
+ * Segurança: Vercel Cron envia automaticamente o header correto
+ * Não é necessário autenticação manual
  */
 export async function GET(request: Request) {
   try {
-    // Segurança: Verifica se a requisição vem da Vercel Cron
+    // Segurança: Apenas aceita requisições do Vercel Cron
     const authHeader = request.headers.get("authorization");
-    if (
-      process.env.NODE_ENV === "production" &&
-      authHeader !== `Bearer ${process.env.CRON_SECRET}`
-    ) {
-      return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
+    const cronSecret = process.env.CRON_SECRET;
+    
+    // Em produção, verifica se vem da Vercel Cron
+    if (process.env.NODE_ENV === "production") {
+      if (!authHeader || authHeader !== `Bearer ${cronSecret}`) {
+        console.log("[CRON] Tentativa de acesso não autorizado");
+        return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
+      }
     }
 
     console.log("[CRON] Iniciando atualização dos produtos do ML...");

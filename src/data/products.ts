@@ -24,6 +24,8 @@ export const ML_LINKS = {
     "https://www.mercadolivre.com.br/ultimate-fitness-mini-bike-bicicleta-ergometrica/up/MLBU2934790909",
   spinning:
     "https://www.mercadolivre.com.br/ultimate-fitness-bicicleta-ergometrica-spinning/up/MLBU3325822548",
+  miniBike2:
+    "https://www.mercadolivre.com.br/ultimate-fitness-mini-bike-bicicleta-ergometrica/up/MLBU2954483127",
 };
 
 export const miniBikeSlides: CarouselSlide[] = [
