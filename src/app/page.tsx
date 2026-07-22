@@ -282,9 +282,9 @@ export default function HomePage() {
               </p>
             </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 items-stretch">
-              <ProductCard {...miniBikeProduct} slides={miniBikeSlides} />
-              <ProductCard {...spinningProduct} slides={spinningSlides} />
-              <ProductCard {...miniBike2Product} slides={miniBike2Slides} />
+              <ProductCardWithML mlProductKey="miniBike" {...miniBikeProduct} slides={miniBikeSlides} />
+              <ProductCardWithML mlProductKey="spinning" {...spinningProduct} slides={spinningSlides} />
+              <ProductCardWithML mlProductKey="miniBike2" {...miniBike2Product} slides={miniBike2Slides} />
             </div>
           </div>
         </section>
