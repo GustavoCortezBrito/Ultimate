@@ -1,0 +1,41 @@
+name: Update Mercado Livre Prices
+
+on:
+  schedule:
+    # Runs every day at 03:00 AM UTC (00:00 AM BRT)
+    - cron: '0 3 * * *'
+  workflow_dispatch: # Allows manual trigger from GitHub Actions tab
+
+jobs:
+  update-prices:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Install Playwright browsers
+        run: npx playwright install --with-deps chromium
+
+      - name: Execute Price Updater
+        run: node scripts/update-prices.js
+
+      - name: Commit and push if changed
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action Bot"
+          git add src/data/ml_prices.json
+          if git diff --staged --quiet; then
+            echo "No price changes detected."
+          else
+            git commit -m "chore(cron): update Mercado Livre product prices [skip ci]"
+            git push
+          fi

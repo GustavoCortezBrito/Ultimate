@@ -1,0 +1,41 @@
+{
+  "lastUpdated": "2026-07-27T15:36:21.579Z",
+  "products": {
+    "miniBike": {
+      "id": "miniBike",
+      "title": "Ultimate Fitness Mini Bike Bicicleta Ergométrica",
+      "price": 124.59,
+      "originalPrice": 154.9,
+      "soldQuantity": 5000,
+      "ratingAverage": 4.8,
+      "reviewsTotal": 2061,
+      "freeShipping": true,
+      "permalink": "https://www.mercadolivre.com.br/ultimate-fitness-mini-bike-bicicleta-ergometrica/up/MLBU2934790909",
+      "currencyId": "BRL"
+    },
+    "spinning": {
+      "id": "spinning",
+      "title": "Ultimate Fitness Bicicleta Ergométrica Spinning",
+      "price": 479.51,
+      "originalPrice": 749,
+      "soldQuantity": 25,
+      "ratingAverage": 4.6,
+      "reviewsTotal": 7,
+      "freeShipping": true,
+      "permalink": "https://www.mercadolivre.com.br/ultimate-fitness-bicicleta-ergometrica-spinning/up/MLBU3325822548",
+      "currencyId": "BRL"
+    },
+    "miniBike2": {
+      "id": "miniBike2",
+      "title": "Ultimate Fitness Mini Bike Bicicleta Ergométrica Pro",
+      "price": 185,
+      "originalPrice": 205.9,
+      "soldQuantity": 1000,
+      "ratingAverage": 4.8,
+      "reviewsTotal": 771,
+      "freeShipping": true,
+      "permalink": "https://www.mercadolivre.com.br/ultimate-fitness-mini-bike-bicicleta-ergometrica/up/MLBU2954483127",
+      "currencyId": "BRL"
+    }
+  }
+}

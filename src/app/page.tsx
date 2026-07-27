@@ -97,14 +97,14 @@ export default function HomePage() {
                 "@type": "Offer",
                 "url": "https://www.mercadolivre.com.br/ultimate-fitness-mini-bike-bicicleta-ergometrica/up/MLBU2934790909",
                 "priceCurrency": "BRL",
-                "price": "164.90",
+                "price": "124.59",
                 "itemCondition": "https://schema.org/NewCondition",
                 "availability": "https://schema.org/InStock"
               },
               "aggregateRating": {
                 "@type": "AggregateRating",
                 "ratingValue": "4.8",
-                "reviewCount": "2429"
+                "reviewCount": "2061"
               }
             },
             {
@@ -121,7 +121,7 @@ export default function HomePage() {
                 "@type": "Offer",
                 "url": "https://www.mercadolivre.com.br/ultimate-fitness-bicicleta-ergometrica-spinning/up/MLBU3325822548",
                 "priceCurrency": "BRL",
-                "price": "581.22",
+                "price": "479.51",
                 "itemCondition": "https://schema.org/NewCondition",
                 "availability": "https://schema.org/InStock"
               },
