@@ -7,7 +7,10 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint .",
-    "format": "prettier --write ."
+    "format": "prettier --write .",
+    "ml:check": "node -e \"fetch('http://localhost:3000/api/ml-products').then(r=>r.json()).then(d=>console.log('Última atualização:', d.lastUpdated, '\\nProdutos:', Object.keys(d.data).length))\"",
+    "ml:update": "node -e \"fetch('http://localhost:3000/api/cron/update-ml').then(r=>r.json()).then(d=>console.log(JSON.stringify(d,null,2)))\"",
+    "ml:prices": "node -e \"const fs=require('fs');const d=JSON.parse(fs.readFileSync('src/data/ml_prices.json','utf8'));console.log('Última atualização:', d.lastUpdated);Object.entries(d.products).forEach(([k,v])=>console.log(`${k}: R$ ${v.price}`));\""
   },
   "dependencies": {
     "cheerio": "^1.0.0",
