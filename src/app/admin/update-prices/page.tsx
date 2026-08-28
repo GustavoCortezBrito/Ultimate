@@ -22,14 +22,32 @@ export default function AdminUpdatePrices() {
     miniBike2: { price: mlPricesData.products.miniBike2.price, originalPrice: mlPricesData.products.miniBike2.originalPrice || 0 },
   });
 
-  const handleLogin = (e: React.FormEvent) => {
+  const handleLogin = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Senha simples (em produção, usar env var)
-    if (password === process.env.NEXT_PUBLIC_ADMIN_PASSWORD || password === 'ultimate2026') {
-      setIsAuthenticated(true);
-      setMessage('✅ Acesso liberado!');
-    } else {
-      setMessage('❌ Senha incorreta');
+    setLoading(true);
+    setMessage('🔐 Verificando senha...');
+
+    try {
+      const response = await fetch('/api/admin/auth', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ password }),
+      });
+
+      const data = await response.json();
+
+      if (data.success) {
+        setIsAuthenticated(true);
+        setMessage('✅ Acesso liberado!');
+      } else {
+        setMessage('❌ Senha incorreta');
+      }
+    } catch (error) {
+      setMessage('❌ Erro ao autenticar. Tente novamente.');
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -112,9 +130,10 @@ export default function AdminUpdatePrices() {
             </div>
             <button
               type="submit"
-              className="w-full bg-red-600 hover:bg-red-700 text-white font-bold py-3 rounded-lg transition"
+              disabled={loading}
+              className="w-full bg-red-600 hover:bg-red-700 disabled:bg-gray-600 disabled:cursor-not-allowed text-white font-bold py-3 rounded-lg transition"
             >
-              Entrar
+              {loading ? '⏳ Verificando...' : 'Entrar'}
             </button>
           </form>
           {message && (
