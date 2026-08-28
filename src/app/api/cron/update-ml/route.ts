@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 import { updateMLPrices, getStoredMLProducts } from "@/lib/mercadolivre";
 
-export const maxDuration = 60; // Allow up to 60 seconds for scraping
+export const maxDuration = 300; // 5 minutes para permitir Puppeteer
 export const dynamic = 'force-dynamic';
 
 export async function GET(request: Request) {
