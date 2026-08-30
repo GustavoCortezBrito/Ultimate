@@ -2,9 +2,12 @@ name: Update Mercado Livre Prices
 
 on:
   schedule:
-    # Runs every day at 03:00 AM UTC (00:00 AM BRT)
-    - cron: '0 3 * * *'
-  workflow_dispatch: # Allows manual trigger from GitHub Actions tab
+    # Executa 1 vez por semana (toda segunda-feira às 03:00 UTC / 00:00 BRT)
+    - cron: '0 3 * * 1'
+  workflow_dispatch: # Permite disparar manualmente na aba Actions do GitHub
+
+permissions:
+  contents: write
 
 jobs:
   update-prices:
@@ -22,20 +25,23 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Install Playwright browsers
-        run: npx playwright install --with-deps chromium
+      - name: Install Playwright & Chromium
+        run: |
+          npm install -D playwright
+          npx playwright install --with-deps chromium
 
       - name: Execute Price Updater
         run: node scripts/update-prices.js
 
       - name: Commit and push if changed
         run: |
-          git config --local user.email "action@github.com"
-          git config --local user.name "GitHub Action Bot"
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
           git add src/data/ml_prices.json
           if git diff --staged --quiet; then
-            echo "No price changes detected."
+            echo "Nenhuma alteração de preço detectada."
           else
-            git commit -m "chore(cron): update Mercado Livre product prices [skip ci]"
+            git commit -m "chore(cron): atualizar preços do Mercado Livre (semanal) [skip ci]"
             git push
           fi
+
