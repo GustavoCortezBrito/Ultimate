@@ -25,11 +25,6 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Install Playwright & Chromium
-        run: |
-          npm install -D playwright
-          npx playwright install --with-deps chromium
-
       - name: Execute Price Updater
         run: node scripts/update-prices.js
 
@@ -44,4 +39,5 @@ jobs:
             git commit -m "chore(cron): atualizar preços do Mercado Livre (semanal) [skip ci]"
             git push
           fi
+
 
