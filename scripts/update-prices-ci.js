@@ -13,18 +13,21 @@ const ML_PRODUCTS = {
     id: '5247689130',
     sku: 'UFMBC',
     name: 'Mini Bike Cinza',
+    defaultPrice: 129.90,
     permalink: 'https://www.mercadolivre.com.br/ultimate-fitness-mini-bike-bicicleta-ergometrica/up/MLBU2934790909',
   },
   miniBike2: {
     id: '3951117617',
     sku: 'UFMBP',
     name: 'Mini Bike Preta',
+    defaultPrice: 189.90,
     permalink: 'https://www.mercadolivre.com.br/ultimate-fitness-mini-bike-bicicleta-ergometrica/up/MLBU2954483127',
   },
   spinning: {
     id: '4136320965',
     sku: 'UFSB3V',
     name: 'Bike Spinning',
+    defaultPrice: 749.00,
     permalink: 'https://www.mercadolivre.com.br/ultimate-fitness-bicicleta-ergometrica-spinning/up/MLBU3325822548',
   },
 };
